@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\CyrilNgwerume\\source\\repos\\WeatherApplication\\WeatherApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WeatherApplication.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WeatherApplication.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\CyrilNgwerume\\source\\repos\\WeatherApplication\\WeatherApplication\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\CyrilNgwerume\\source\\repos\\WeatherApplication\\WeatherApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\CyrilNgwerume\\source\\repos\\WeatherApplication\\WeatherApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\CyrilNgwerume\\source\\repos\\WeatherApplication\\WeatherApplication\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WeatherApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WeatherApplication.props",
+      "PackagePath": "build\\WeatherApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WeatherApplication.props",
+      "PackagePath": "buildMultiTargeting\\WeatherApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WeatherApplication.props",
+      "PackagePath": "buildTransitive\\WeatherApplication.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
