@@ -1,24 +1,18 @@
 using WeatherApplication.Components;
-using WeatherApplication.Data;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using WeatherApplication.Models;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.Cookie.Name = "auth_token";
-        options.LoginPath = "/login";
-        options.Cookie.MaxAge = TimeSpan.FromMinutes(30);
-        options.AccessDeniedPath = "/failed-login";
-    });
-builder.Services.AddAuthentication();
-builder.Services.AddCascadingAuthenticationState();
-builder.Services.AddDbContext<AppDb
+builder.Services.AddDbContext<DemoContext>(options =>
+    options.UseCosmos(
+        "ConnectionString",
+        "Database"
+    ));
 
 var app = builder.Build();
 
@@ -34,8 +28,8 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
-app.UseAuthentication();
-app.UseAuthorization();
+//app.UseAuthentication();
+//app.UseAuthorization();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
