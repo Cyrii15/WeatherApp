@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/WeatherApplication/Weather.Api/bin/Debug
+/WeatherApplication/.vs/WeatherApplication
+/WeatherApplication/Weather.Api/obj
+/WeatherApplication/Weather.Core/obj
+/WeatherApplication/Weather.Portal/obj
