@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using Weather.Api.Data;
 using Weather.Api.Entities;
 
@@ -8,17 +7,17 @@ namespace Weather.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class UserController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly ILogger<UserController> _logger;
     private readonly ApplicationDataContext _context;
     private static bool _ensureCreated { get; set; } = false;
-    public WeatherForecastController(ApplicationDataContext dbContext, ILogger<WeatherForecastController> logger)
+    public UserController(ApplicationDataContext dbContext, ILogger<UserController> logger)
     {
         _context = dbContext;
         _logger = logger;

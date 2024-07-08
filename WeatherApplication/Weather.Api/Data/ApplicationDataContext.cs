@@ -14,6 +14,7 @@ public class ApplicationDataContext : DbContext
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<Address> Addresses { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -28,14 +29,19 @@ public class ApplicationDataContext : DbContext
         // .HasPartitionKey(c => c.Id)
         // .HasNoDiscriminator();
 
-        //builder.Entity<Order>()
-        // .ToContainer(nameof(Order))
-        // .HasPartitionKey(o => o.CustomerId)
-        // .HasNoDiscriminator();
+        builder.Entity<Order>()
+         .ToContainer(nameof(Order))
+         .HasPartitionKey(o => o.CustomerId)
+         .HasNoDiscriminator();
 
-        //builder.Entity<Address>()
-        // .ToContainer(nameof(Address))
-        // .HasPartitionKey(c => c.CustomerId)
-        // .HasNoDiscriminator();
+        builder.Entity<Address>()
+         .ToContainer(nameof(Address))
+         .HasPartitionKey(c => c.CustomerId)
+         .HasNoDiscriminator();
+
+        builder.Entity<User>()
+         .ToContainer(nameof(User))
+         .HasPartitionKey(c => c.Id)
+         .HasNoDiscriminator();
     }
 }

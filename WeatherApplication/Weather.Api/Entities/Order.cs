@@ -9,5 +9,5 @@ public class Order
     public Guid CustomerId { get; set; }
     public Guid TrackingNumber { get; set; }
 
-    public DefaultAddress ShipToAddress { get; set; }
+    public Address ShipToAddress { get; set; }
 }
